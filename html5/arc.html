@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Canvas Arc</title>
+</head>
+<body>
+	<center>
+		<canvas id="canvas"></canvas>
+	</center>
+	<script>
+        var canvas=document.getElementById('canvas');
+
+        canvas.width=1024;
+        canvas.height=768;
+
+        var context=canvas.getContext('2d');
+        context.lineWidth=5;
+        context.strokeStyle='#005588';
+        context.arc(300,300,200,0,1.5*Math.PI);
+        context.stroke();
+	</script>
+</body>
+</html>
