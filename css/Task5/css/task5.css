@@ -1,0 +1,224 @@
+/*reset*/
+*{
+	margin: 0;
+	padding: 0;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;    
+}  
+fieldset,img {
+	border:0;    
+}  
+address,caption,cite,code,dfn,em,strong,th,var{
+    font-style:normal;        
+    font-weight:normal;    
+}  
+ol,ul{
+	list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+q:before,q:after{
+    content:'';    
+}  
+/*reset-end*/
+html{
+    font-size: 100px;
+    font-family:arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+body{
+	min-width: 320px;
+	max-width: 768px;
+	background-color: #F0F0F0;
+}
+@media (max-width: 320px) {
+	html{
+        font-size: 30px;
+	}
+}
+@media (min-width: 320px) and (max-width: 480px) {
+	html{
+		font-size: 50px;
+	}
+}
+@media (min-width: 480px) and (max-width: 768px) {
+	html{
+		font-size: 80px;
+	}
+}
+@media (min-width: 768px){
+	body{
+		margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+	}
+}
+
+div{
+	left: 0;
+	position: relative;
+}
+nav,#pusher,.nav{
+    transition: all 0.5s ease 0s;
+}
+.pusher-open{
+    left: 70%;
+}
+.nav-open{
+	left: 0;
+}
+nav{
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: -100%;
+	background-color: #FFFFFF;
+	height: 100%;
+	width: 70%;
+}
+nav ul li{
+	display: block;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	border-bottom: 1px solid #DFDFDF;
+    padding-left: 0.4rem;
+    background: transparent url(../img/icon-blue.png)
+	no-repeat 95% 50%/0.24rem 0.4rem;
+}
+nav ul li a{
+	text-decoration: none;
+	color: #29BEDF;
+	font-size: 0.26rem;
+	display: block;
+}
+.item1{
+	background: transparent url(../img/icon-sound.png)
+	  no-repeat left center/0.4rem 0.4rem;
+	padding-left: 0.7rem;
+
+}
+.item2{
+	background: transparent url(../img/icon-set.png)
+	  no-repeat left center/0.4rem 0.4rem;
+	padding-left: 0.7rem;
+}
+.item3{
+	background: transparent url(../img/icon-help.png)
+	  no-repeat left center/0.4rem 0.4rem;
+	padding-left: 0.7rem;
+}
+.item4{
+	background: transparent url(../img/icon-about.png)
+	  no-repeat left center/0.4rem 0.4rem;
+	padding-left: 0.7rem;
+}
+header{
+    width: 100%;
+    height: 0.7rem;
+    background-color: #29BEDF;
+    position: relative;
+}
+#menu{
+	background: transparent url(../img/menu.png) no-repeat center/0.32rem 0.27rem;
+	border: none;
+	width: 0.32rem;
+	height: 0.27rem;
+	top: 0.2rem;
+	left: 0.2rem;
+	position: absolute;
+	cursor: pointer;
+}
+
+section{
+	text-align: center;
+	color: #A0A0A0;
+    width: 90%;
+    padding-top: 0.27rem;
+	margin: 0 auto;
+}
+.container{
+	background-color: #FFFFFF;
+	border: 1px solid #D6D6D6;
+}
+.container:before, .container:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.m-head p{
+	background: transparent url(../img/icon-white.png) no-repeat 95% 50%/0.24rem 0.4rem;
+	font-size: 0.38rem;
+    height: 1.15rem;
+    line-height: 1.15rem;
+}
+.content{
+	margin: 0.25rem 0 0 0;
+}
+.content h1{
+	font-weight: 400;
+	font-size: 0.38rem;
+	color: #FEB135;
+	line-height: 0.7rem;
+	height: 0.7rem;
+	display: block;
+	border-bottom: 1px solid #FEB135;
+}
+.content h2{
+	margin: 0.3rem auto;
+	background-color: #69D1EA;
+	font-weight: 400;
+	font-size: 0.38rem;
+	color: #FFFFFF;
+	line-height: 1.25rem;
+	width: 80%;
+	height: 1.25rem;
+	display: block;
+}
+.content .icon{
+	position: relative;
+}
+.content .icon:after{
+	content: " ";
+	display: block;
+    height: 0.4rem;
+    width: 0.24rem;
+    background: transparent url(../img/icon-tri.png) no-repeat center/0.24rem 0.4rem;
+    top: 50%;
+    right: -0.4rem;
+    margin-top: -0.2rem;
+    position: absolute;
+}
+.content p{
+	font-size: 0.25rem;
+}
+.content ul{
+	display: block;
+	height: 0.5rem;
+	width: 1.6rem;
+	margin: 0 auto;
+}
+.content ul li{
+	display: inline-block;
+	width: 0.2rem;
+	height: 0.2rem;
+	background-color: #F0F0F0;
+	border-radius: 50%;
+	float: left;
+	margin: 0.1rem;
+}
+.content ul li.active{
+	background-color: #29BEDF;
+}
+
+.content ul:before, .content ul:after{
+	content: "";
+	display: table;
+	clear: both;
+}

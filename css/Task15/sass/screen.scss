@@ -1,0 +1,536 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+$icons-spacing: 4px;
+@import 'compass/reset';
+@import 'compass/css3';
+@import 'compass/utilities/';
+@import 'compass/utilities/sprites';
+@import 'icons/*.png';
+$icons-sprite-dimensions: true;
+$main-color: #29b078;
+$banner-color: #f1a750;
+
+@mixin tdiv
+{
+    font-size: 12px;
+
+    display: table-cell;
+
+    padding: 10px;
+
+    vertical-align: middle;
+
+    color: #999;
+}
+html
+{
+    font-family: arial,'Hiragino Sans GB','Microsoft Yahei',sans-serif;
+}
+body
+{
+    line-height: 1.75em;
+
+    background-color: #fafafa;
+}
+*
+{
+    @include box-sizing(border-box);
+}
+header
+{
+    background-color: #fff;
+    .header-top
+    {
+        position: relative;
+
+        height: 39px;
+        p
+        {
+            font-size: 14px;
+            line-height: 39px;
+
+            float: left;
+
+            color: $main-color;
+        }
+        ul
+        {
+            position: relative;
+            top: 50%;
+
+            float: right;
+
+            margin-top: -12px;
+            li
+            {
+                display: block;
+                float: right;
+
+                width: 25px;
+                height: 24px;
+                margin-left: 15px;
+            }
+            .icon-1
+            {
+                @include icons-sprite(ic-1);
+            }
+            .icon-2
+            {
+                @include icons-sprite(ic-2);
+            }
+            .icon-3
+            {
+                @include icons-sprite(ic-3);
+            }
+        }
+    }
+    .nav-bg
+    {
+        background-color: $main-color;
+    }
+}
+.logo
+{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+
+    @include transform(translate(0,-50%));
+    img
+    {
+        width: 70%;
+        height: 70%;
+    }
+}
+.nav >
+{
+    li
+    {
+        text-align: center;
+
+        border-top: 1px solid rgba(250,250,250,.25);
+        border-bottom: 1px solid rgba($main-color,.15);
+        background-color: lighten($main-color,80%);
+        &:hover
+        {
+            background-color: lighten($main-color,30%);
+        }
+        a
+        {
+            color: darken($main-color,50%);
+            &:hover,
+            &:focus
+            {
+                color: #555;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.navbar
+{
+    margin-bottom: 0;
+
+    border: none;
+    border-radius: 0;
+    .container
+    {
+        position: relative;
+    }
+    .navbar-toggle
+    {
+        background-color: transparent;
+        .icon-bar
+        {
+            background-color: #fff;
+        }
+    }
+}
+
+.breadcrumb
+{
+    font-size: 16px;
+    line-height: 80px;
+
+    color: #555;
+    border-radius: none;
+    background-color: #fafafa;
+    > li + li:before
+    {
+        content: '>';
+
+        color: #555;
+    }
+    > li > a
+    {
+        color: #555;
+    }
+    > .active > a
+    {
+        color: $main-color;
+    }
+}
+.main
+{
+    nav
+    {
+        font-size: 14px;
+
+        border-top: 2px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        span
+        {
+            color: #999;
+        }
+        ul
+        {
+            display: inline;
+            li
+            {
+                margin: 20px;
+                a
+                {
+                    color: #555;
+                }
+            }
+            .active a
+            {
+                padding: .03rem .05rem;
+
+                color: #fff;
+                background-color: #29b078;
+            }
+        }
+    }
+}
+.table
+{
+    position: relative;
+
+    margin-top: 45px;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px #ddd;
+    &:hover
+    {
+        .shutter
+        {
+            display: block;
+        }
+        .shutterbg
+        {
+            display: block;
+        }
+    }
+    .top
+    {
+        @include tdiv;
+        @include clearfix;
+        img
+        {
+            float: left;
+
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+        h1
+        {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 40px;
+
+            padding-left: 8px;
+
+            color: black;
+        }
+        p
+        {
+            font-size: 12px;
+            line-height: 1.75em;
+
+            padding-left: 8px;
+
+            color: black;
+        }
+    }
+    .cell
+    {
+        width: 100%;
+        > div
+        {
+            width: 20%;
+
+            border-top: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+
+            @include tdiv;
+            &:last-of-type
+            {
+                border-right: none;
+            }
+        }
+    }
+    .paid
+    {
+        > div
+        {
+            text-align: center;
+            width: 120px;
+            border-top: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            display: table-cell;
+            vertical-align: middle;
+            border-bottom: 1px solid #ddd;
+            color: #999;
+            &:last-of-type
+            {
+                width: 67%;
+                border-right: none;
+                border-bottom: none;
+            }
+            > div
+            {
+                padding: 5px 10px;
+                display: block;
+                width: 100%;
+                border-bottom: 1px solid #ddd;
+                @include clearfix;
+                > span
+                {
+                    float: right;
+                    &:first-child
+                    {
+                        float: left;
+                    }
+                }
+            }
+        }
+    }
+    .bottom{
+        border-bottom: 1px solid #ddd;
+        strong{
+            padding: 5px 10px;
+            font-weight: 600;
+        }
+    }
+    .tips{
+        @include tdiv;
+    }
+    span
+    {
+        font-size: 12px;
+
+        color: black;
+    }
+}
+
+.star
+{
+    display: inline-block;
+
+    margin: 0 .05rem;
+
+    @include icons-sprite(star);
+}
+.red
+{
+    font-weight: 500;
+
+    color: red !important;
+}
+.shutter
+{
+    font-size: 16px;
+
+    position: absolute;
+    z-index: 1002;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+    padding: 30px 50px;
+
+    word-break: break-all;
+
+    color: #fff;
+    h1
+    {
+        font-weight: normal;
+        line-height: 60px;
+
+        text-align: center;
+
+        border: none;
+    }
+    p
+    {
+        text-align: justify;
+        text-indent: 2em;
+    }
+}
+
+.shutterbg
+{
+    position: absolute;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+
+    display: none ;
+
+    width: 100%;
+    height: 100%;
+    @include border-radius(6px);
+
+    opacity: .7;
+    background-color: black;
+}
+section
+{
+    font-size: 14px;
+    > h1
+    {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 80px;
+
+        border-bottom: 2px solid #ddd;
+    }
+}
+footer
+{
+    font-size: 14px;
+
+    color: #fff;
+    background-color: $main-color;
+    h1
+    {
+        line-height: 4em;
+    }
+    ul li
+    {
+        a
+        {
+            line-height: 3em;
+
+            color: #fff;
+            &:hover,
+            &:focus
+            {
+                color: #555;
+            }
+        }
+    }
+    .qrcode
+    {
+        p
+        {
+            padding-top: 1em;
+            padding-right: 5px;
+        }
+    }
+}
+.copy
+{
+    clear: both;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(250,250,250,.25);
+}
+// /* Custom, iPhone Retina */
+@media only screen and (min-width : 360px) and (max-width: 768px)
+{
+    .col-xs-12{
+        max-width: 360px;
+        margin: 0 auto;
+    }
+}
+
+/* Extra Small Devices, Phones */
+// @media only screen and (min-width : 480px)
+// {
+// }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+{
+    .nav
+    {
+        > li
+        {
+            background-color: transparent;
+            &:hover,
+            &:focus
+            {
+                border-bottom: 4px solid #fff;
+                background-color: transparent;
+            }
+            > a
+            {
+                line-height: 60px;
+
+                width: 80px;
+
+                text-align: center;
+
+                color: #fff;
+                &:hover,
+                &:focus
+                {
+                    color: #555;
+                    background-color: transparent;
+                }
+            }
+        }
+        > li.active
+        {
+            border-bottom: #fff 4px solid;
+        }
+    }
+    .navbar-nav
+    {
+        float: right;
+    }
+    .logo
+    {
+        img
+        {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+{
+    .contact
+    {
+        li
+        {
+            padding-top: 1.5em;
+        }
+    }
+    .qrcode
+    {
+        text-align: right;
+        p
+        {
+            padding: 0;
+        }
+    }
+}
+/* Large Devices, Wide Screens */
+// @media only screen and (min-width : 1200px)
+// {
+// }

@@ -1,0 +1,40 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import 'compass/reset';
+@import 'compass/css3';
+@import 'compass/utilities';
+
+.container
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    min-width: 16em;
+
+    @include transform(translate(-50%,-50%));
+    @include clearfix;
+}
+.box
+{
+    float: left;
+
+    width: 5em;
+    height: 5em;
+    margin-left: .3em;
+    margin-bottom: 0.3em;
+
+    border: none;
+    background-color: orange;
+
+    @include border-radius(0.3em);
+    &:nth-child(3n+1)
+    {
+        clear: left;
+
+        margin-left: 0;
+    }
+}

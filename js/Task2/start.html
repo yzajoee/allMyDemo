@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>杀人游戏简化版</title>
+	<link rel="stylesheet" href="stylesheets/screen.css" />
+
+	<meta name="viewport" content="width=600" />
+</head>
+<body>
+	<div id="content" data-role="page">
+		<div class="main">
+			<header> <i class="back"></i>
+				<h1>参数设置</h1> <i class="close"></i>
+			</header>
+			<section>
+				<h1>玩家配比</h1>
+				<form>
+					<table>
+						<tr>
+							<td>总人数：</td>
+							<td>
+								<input type="text" name="sum" id="sum" value="3" />
+								<label id="sum_label" for="sum"></label>
+							</td>
+						</tr>
+						<tr>
+							<td>杀手人数：</td>
+							<td>
+								<input type="text" name="killerNum" id="killerNum" value="1" title="" />
+								<label id="killer_label" for="sum"></label>
+							</td>
+						</tr>
+						<tr>
+							<td>水民：</td>
+							<td>
+								<input type="text" name="normalNum" id="normalNum" value="2" />
+							</td>
+						</tr>
+					</table>
+					<div>
+						<button type="button" id="help">查看规则</button>
+						<button type="button" id="play">开始游戏</button>
+					</div>
+				</form>
+			</section>
+		</div>
+	</div>
+	<div class="closebg"></div>
+	<div class="closewin">
+	    <p>确定结束这场游戏吗？</p>		
+		<button class="cancel">取消</button>
+		<button class="confirm">确定</button>
+	</div>
+	<script src="javascripts/jquery.min.js"></script>
+	<script src="javascripts/start.js"></script>
+</body>
+</html>

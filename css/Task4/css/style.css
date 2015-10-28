@@ -1,0 +1,220 @@
+/*reset*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+	margin:0;        
+	padding:0;    	
+}  
+table {
+    border-collapse:collapse;
+    border-spacing:0;    
+}  
+fieldset,img {
+	border:0;    
+}  
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-style:normal;        
+    font-weight:normal;    
+}  
+ol,ul{
+    list-style: none;
+}
+caption,th {       
+	text-align:left;    
+}  h1,h2,h3,h4,h5,h6{
+	font-size: 100%;
+	font-weight: normal;
+}
+q:before,q:after {
+    content:'';    
+}  
+abbr,acronym {
+	border:0;    
+}
+
+/*全局*/
+.clearfix:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix:after{
+	*+height: 1%;
+}
+html{
+	font-family:arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+}
+@media (max-width: 320px){
+    html{
+    	font-size: 27%;
+    }
+}
+@media (min-width: 320px) and (max-width: 400px){
+    html{
+    	font-size: 33%;
+    }
+}
+@media (min-width: 400px) and (max-width: 500px){
+	html{
+		font-size: 40%;
+	}
+}
+@media (min-width: 500px) and (max-width: 650px){
+    html{
+    	font-size: 53.5%;
+    }
+}
+@media (min-width: 650px) and (max-width: 850px){
+    html{
+    	font-size: 68.8%;
+    }
+}
+@media (min-width: 850px){
+    html{
+    	font-size: 90%;
+    }
+}
+
+/*header*/
+header{
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	background-color: #29BEDF;
+	border-bottom: #72D3EA 0.1rem solid;
+}
+.home{
+	left: 5%;
+	background: transparent url("../images/home.png") no-repeat 
+	center center/100% 85%;
+	float: left;
+	padding: 5%;
+	position: absolute;
+}
+header p{
+	padding-top: 1.5rem;
+	color: #FFF;
+	text-align: center;
+    font-size: 4rem;
+}
+.more{
+	right: 5%;
+	top: 2.8rem;
+	background: transparent url("../images/more.png") 
+	    no-repeat center center/100% 100%;
+    float: right;
+    padding: 5%;
+    position: absolute;
+}
+/*section*/
+section{
+	padding-bottom: 12rem;
+}
+.mh{
+	background-color: #29BEDF;
+	margin: 0;
+	padding: 3rem;
+}
+.victory{
+	    background: transparent url("../images/victory.png") 
+        no-repeat center center/60% 95%;
+        width: 100%;
+        height: 21rem;
+        margin: 0 auto;
+}
+.vp1{
+    color: #FFF;
+    font-size: 4rem;
+    font-weight: bold;
+    padding-top: 14rem;
+    text-align: center;
+}
+.vp2{
+	color: #FDC65B;
+	font-size: 3.5rem;
+	font-weight: 600;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 4rem;
+}
+.content{
+	color: #FFF;
+	font-size: 2.5rem;
+	font-weight: 300;
+	margin-left: 10%;
+	margin-right: 10%; 
+	padding-bottom: 2.5rem;
+}
+.content ul:before,.content ul:after{
+	
+}
+.content ul{
+	width: 100%;
+	padding-left: 0;
+    float: left;
+    line-height: 1.8em;
+}
+.content ul li{
+    width: 30%;
+	padding-right: 3%;
+	float: left;
+}
+.cl{
+	clear: left;
+}
+.ctlist{
+	margin-left: 10%;
+	margin-right: 10%; 
+	padding-bottom: 2rem;
+	position: relative;
+	border-bottom: #DDD solid 0.1rem;
+	font-size: 2.5rem;
+	color: #DDD;
+}
+.ctlist h1{
+	color: #555;
+    font-size: 2.7rem;
+    line-height: 1.7em;
+}
+.ctlist small{
+	right: 0;
+	top: 1rem;
+    float: left;
+    position: absolute;
+}
+.ctlist p{
+    line-height: 1.5em;
+}
+/*footer*/
+footer{
+	width: 100%;
+	height: 10rem;
+	bottom: 0;
+	position: fixed;
+	background-color: rgba(41,190,223,0.5);
+	-pie-background:rgba(0,0,0,.5);
+	box-shadow: 1px 1px rgba(0,0,0,.5);
+	overflow: auto;
+}
+footer button{
+	width: 35%;
+	height: 5rem;
+	color: #FFF;
+	font-size: 2.5rem;
+	font-family:arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+	-webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    border-radius: 1rem;
+    border-color: transparent;
+    position: fixed;
+}
+.bt1{
+	background-color: #F66E6E;
+    left: 10%;
+    bottom: 2rem;
+}
+.bt2{
+	background-color: #FBB436;
+	right: 10%;
+	bottom: 2rem;
+}

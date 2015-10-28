@@ -1,0 +1,10 @@
+$icons-spacing: 4px;
+// $icons-layout: smart;
+
+@import 'compass/utilities/sprites';
+
+@import 'icons/*.png';
+
+@include all-icons-sprites;
+
+// @include icons-sprite-dimesions: true;

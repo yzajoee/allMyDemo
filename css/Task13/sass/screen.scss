@@ -1,0 +1,529 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import 'compass/reset';
+@import 'compass/css3';
+@import 'compass/utilities/';
+$main-color: #29b078;
+
+html
+{
+    font-family: arial,'Hiragino Sans GB','Microsoft Yahei',sans-serif;
+}
+body
+{
+    line-height: 1.75em;
+
+    background-color: #fafafa;
+}
+*
+{
+    @include box-sizing(border-box);
+}
+header
+{
+    background-color: #fff;
+    .header-top
+    {
+        position: relative;
+
+        height: 39px;
+        p
+        {
+            font-size: 14px;
+            line-height: 39px;
+
+            float: left;
+
+            color: $main-color;
+        }
+        ul
+        {
+            position: relative;
+            top: 50%;
+
+            float: right;
+
+            margin-top: -12px;
+            li
+            {
+                display: block;
+                float: right;
+
+                width: 25px;
+                height: 24px;
+                margin-left: 15px;
+            }
+            @for $i from 1 through 3
+            {
+                .icon-#{$i}
+                {
+                    background-image: url(../img/ic-#{$i}.png);
+                }
+            }
+        }
+    }
+    .nav-bg
+    {
+        background-color: $main-color;
+    }
+}
+.nav>
+{ 
+    li
+    {
+    	text-align: center;
+    	background-color: lighten($main-color,80%);
+    	border-top: 1px solid rgba(250,250,250,0.25);
+    	border-bottom: 1px solid rgba($main-color,0.15);
+    	&:hover{
+    		background-color: lighten($main-color,30%);
+    	}
+        a
+        {
+            color: darken($main-color,50%);
+            &:hover,
+            &:focus
+            {
+                color: #555;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.navbar
+{
+    margin-bottom: 0;
+
+    border: none;
+    border-radius: 0;
+    .navbar-toggle
+    {
+        background-color: transparent;
+        .icon-bar
+        {
+            background-color: #fff;
+        }
+    }
+}
+.carousel-caption
+{
+    bottom: 50%;
+
+    @include transform(translate(0,50%));
+    img{
+    	width: 100%;
+    	height: 100%;
+    }
+}
+.carousel-inner>{
+	.item>{
+		img{
+          width: 100%;
+          height: 100%;
+		}
+	}
+}
+	
+section
+{
+    h1
+    {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 125px;
+
+        text-align: center;
+    }
+    section p
+    {
+        font-size: .16rem;
+
+        color: #999;
+    }
+}
+
+.sect-1
+{
+    font-size: 16px;
+
+    text-align: center;
+    h1
+    {
+        line-height: 80px;
+    }
+    p
+    {
+        text-align: center;
+
+        color: #999;
+    }
+}
+.img-box
+{
+    height: 55px;
+    margin-top: 20px;
+
+    text-align: center;
+}
+.count
+{
+    line-height: 2.1em;
+
+    padding-top: 60px;
+
+    text-align: left;
+    b
+    {
+        font-size: 18px;
+
+        display: block;
+
+        width: 100px;
+        margin: 0 auto;
+        padding-left: 28px;
+
+        color: #29b078;
+        background-image: url(../img/i-user.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 13px 13px;
+    }
+    p
+    {
+        margin-bottom: 15px;
+        margin-left: 56px;
+    }
+}
+
+.sect-2
+{
+    .row
+    {
+        .last:after
+        {
+            display: none;
+        }
+        div
+        {
+            position: relative;
+
+            margin-bottom: 20px;
+            &:after
+            {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+
+                display: block;
+
+                width: 32px;
+                height: 30px;
+                margin-top: -15px;
+
+                content: '';
+
+                background-image: url(../img/icon-1.png);
+                background-repeat: no-repeat;
+                background-size: 32px 30px;
+            }
+        }
+    }
+    span
+    {
+        font-size: 18px;
+        line-height: 74px;
+
+        float: left;
+
+        width: 74px;
+        height: 74px;
+
+        text-align: center;
+
+        color: $main-color;
+        background-image: url(../img/icon-2.png);
+    }
+    p
+    {
+        font-size: 14px;
+
+        display: table-cell;
+
+        max-width: 180px;
+        height: 74px;
+        padding-left: 17px;
+
+        vertical-align: middle;
+    }
+}
+.sect-3
+{
+    h1
+    {
+        line-height: 91px;
+    }
+    .people
+    {
+        margin-bottom: 5px;
+        padding: 1em;
+
+        background-color: #fff;
+
+        @include border-radius(10px);
+        @include box-shadow(0 1px 3px #ddd);
+        .img-box
+        {
+            height: auto;
+            img
+            {
+                max-width: 100%;
+            }
+        }
+    }
+}
+.sect-4
+{
+    .enterprise
+    {
+        background-color: #fff;
+
+        @include box-shadow(0 0 3px #ddd);
+        div
+        {
+            height: 253px;
+
+            background-repeat: no-repeat;
+            background-position: center;
+            &:hover
+            {
+                @include box-shadow(0 0 3px #ddd);
+            }
+        }
+    }
+}
+.enterprise
+{
+    margin: 0 5%;
+}
+.col-5
+{
+    position: relative;
+
+    float: left;
+
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.enterprise-1
+{
+    background-image: url(../img/co-1.png);
+}
+.enterprise-2
+{
+    background-image: url(../img/co-2.png);
+}
+.enterprise-3
+{
+    background-image: url(../img/co-3.png);
+}
+.enterprise-4
+{
+    background-image: url(../img/co-4.png);
+}
+.enterprise-5
+{
+    background-image: url(../img/co-5.png);
+}
+.sect-5
+{
+    margin-top: 100px;
+    padding-bottom: 1em;
+
+    background-color: #fff;
+    h1
+    {
+        line-height: 3em;
+    }
+    ul
+    {
+        padding-left: 30px;
+        li
+        {
+            position: relative;
+
+            min-width: 105px;
+            &:before
+            {
+                position: absolute;
+                top: 50%;
+                left: -10px;
+
+                display: block;
+
+                width: 5px;
+                height: 5px;
+                margin-top: -2.5px;
+
+                content: '';
+
+                background-color: #999;
+
+                @include border-radius(50%);
+            }
+            a
+            {
+                color: #999;
+            }
+        }
+    }
+}
+footer
+{
+    font-size: 14px;
+
+    color: #fff;
+    background-color: $main-color;
+    h1
+    {
+        line-height: 4em;
+    }
+    ul li
+    {
+        a
+        {
+            line-height: 3em;
+
+            color: #fff;
+            &:hover,
+            &:focus
+            {
+                color: #555;
+            }
+        }
+    }
+    .qrcode
+    {
+        p
+        {
+            padding-right: 5px;
+            padding-top: 1em;
+        }
+    }
+}
+.copy
+{
+    clear: both;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(250,250,250,.25);
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+{
+	.nav>
+    {
+        
+      
+        li
+        {
+        	background-color: transparent;
+            &:hover,
+            &:focus
+            {
+                border-bottom: 4px solid #fff;
+                background-color: transparent;
+            }
+            a
+            {
+                line-height: 60px;
+
+                width: 80px;
+
+                text-align: center;
+
+                color: #fff;
+                &:hover,
+                &:focus
+                {
+                    color: #555;
+                    background-color: transparent;
+                }
+            }
+        }
+        li.active
+        {
+            border-bottom: #fff 4px solid;
+        }
+    }
+    .navbar-nav{
+	float: right;
+}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+{
+
+    .sect-1
+    {
+        margin-top: 150px;
+        p
+        {
+            text-align: left;
+        }
+        b
+        {
+            margin-left: 56px;
+        }
+    }
+    .right-dashed
+    {
+        border-right: 1px dashed #dedede;
+    }
+    .sect-2
+    {
+        .row
+        {
+            margin-bottom: 90px;
+            div:after
+            {
+                right: -10px;
+            }
+            .t-last:after
+            {
+                display: none;
+            }
+        }
+    }
+    .col-5
+    {
+        width: 20%;
+    }
+    .enterprise
+    {
+        margin: 0;
+    }
+    .contact
+    {
+        li
+        {
+            padding-top: 1.5em;
+        }
+    }
+    .qrcode
+    {
+        text-align: right;
+        p
+        {
+            padding: 0;
+        }
+    }
+}

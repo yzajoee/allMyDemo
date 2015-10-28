@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Task 5</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scal=1.0,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/task5.css">
+	</head>
+	<body>
+	    <nav id="nav" class="">
+	    	<ul>
+	    		<li><a class="icon item1" href="#">公告</a></li>
+	    		<li><a class="icon item2" href="#">设置</a></li>
+	    		<li><a class="icon item3" href="#">帮助</a></li>
+	    		<li><a class="icon item4" href="#">关于</a></li>
+	    	</ul>
+	    </nav>
+		<div id="pusher" class="">
+		    <header>
+		    	<button id="menu"></button>
+		    </header>
+		    <section>
+		    	<div class="container m-head">
+		    		<p>上次游戏：捉鬼猜词版</p>
+		    	</div>
+		    	<div class="container content">
+		    		<h1>捉鬼游戏</h1>
+		    		<h2>简化版</h2>
+		    		<p>有1133个用户在玩此款游戏</p>
+		    		<h2 class="icon">猜词版</h2>
+		    		<p>有1133个用户在玩此款游戏</p>
+		            <h2>白痴版</h2>
+		    		<p>有1133个用户在玩此款游戏</p>
+		    		<ul>
+		    			<li class="active"></li>
+		    			<li> </li>
+		    			<li> </li>
+		    			<li> </li>
+		    		</ul>
+		    	</div>
+		    </section>
+	    </div>
+	    <script src="js/classie.js"></script>
+	    <script type="text/javascript">
+	        var menu = document.getElementById("menu"),
+				nav = document.getElementById("nav"),
+				pusher = document.getElementById("pusher");
+				
+			menu.onclick=function(){
+				classie.toggle( nav, "nav-open");
+				classie.toggle( pusher, "pusher-open");
+			};
+			
+			
+	    </script>
+	</body>
+</html>

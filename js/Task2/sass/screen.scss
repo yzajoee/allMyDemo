@@ -1,0 +1,558 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+$icons-spacing: 20px;
+$icons-sprite-dimensions: true;
+
+@import 'compass/reset';
+@import 'compass/css3';
+@import 'compass/utilities/sprites';
+@import 'icons/*.png';
+$main-color: #29bedf;
+
+@mixin fontReset
+{
+    font-family: arial,'Hiragino Sans GB','Microsoft Yahei',sans-serif;
+    font-size: 62.5%;
+    font-weight: normal;
+    font-style: normal;
+}
+@mixin center
+{
+    position: absolute;
+    top: 50%;
+
+    @include transform(translate(0,-50%));
+}
+
+@mixin indicators($radius: 24px,$color:#f0f0f0,$a-color:#29bedf,$margin:10px)
+{
+    display: block;
+
+    margin: 0 auto;
+    li
+    {
+        width: $radius;
+        height: $radius;
+        margin: $margin;
+
+        background-color: $color;
+
+        @include inline-block;
+        @include border-radius(50%);
+        &.active
+        {
+            background-color: $a-color;
+        }
+    }
+}
+@mixin button-theme($btn-color: blue,$off-wht: rgba(white,.4),$txt-color:white)
+{
+    padding: .5em;
+
+    color: $txt-color;
+    border-color: darken($btn-color, 20%);
+    background-color: $btn-color;
+
+    @include text-shadow(1px,1px,2px,darken($txt-color,30%));
+    &:hover
+    {
+        background-color: lighten($btn-color, 6%);
+        box-shadow: 0 .125em $off-wht, inset 0 .063em $off-wht, inset 0 -.188em lighten($btn-color, 2%);
+    }
+    &:active
+    {
+        box-shadow: 0 .063em $off-wht, inset 0 0 1.094em darken($btn-color, 10%), inset 0 .063em darken($btn-color, 10%),inset 0 -.188em darken($btn-color, 10%);
+    }
+}
+
+
+*
+{
+    @include box-sizing(border-box);
+}
+html
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    width: 72em;
+    margin: 0 auto;
+
+    @include fontReset;
+    @include box-shadow(0 0 1px #d6d6d6);
+}
+
+nav
+{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: -100%;
+
+    width: 70%;
+    height: 100%;
+
+    background-color: white;
+    ul
+    {
+        li
+        {
+            position: relative;
+
+            display: block;
+
+            height: 8em;
+            padding-left: 4em;
+
+            border-bottom: 1px solid #dfdfdf;
+            &:after
+            {
+                right: 10%;
+
+                display: block;
+
+                content: '';
+
+                @include icons-sprite(icon-blue);
+                @include center;
+            }
+            a
+            {
+                font-size: 2.6rem;
+                line-height: 8rem;
+
+                position: relative;
+
+                padding-left: 7rem;
+
+                text-decoration: none;
+
+                color: $main-color;
+                &:hover,
+                &:active
+                {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+.item1:after
+{
+    display: block;
+
+    content: '';
+
+    @include center;
+    @include icons-sprite(icon-sound);
+}
+.item2:after
+{
+    display: block;
+
+    content: '';
+
+    @include center;
+    @include icons-sprite(icon-set);
+}
+.item3:after
+{
+    display: block;
+
+    content: '';
+
+    @include center;
+    @include icons-sprite(icon-help);
+}
+.item4:after
+{
+    display: block;
+
+    content: '';
+
+    @include center;
+    @include icons-sprite(icon-about);
+}
+
+.main
+{
+    width: 72em;
+    height: 120em;
+    margin: 0 auto;
+
+    background-color: $main-color;
+}
+.main.bgcolor{
+    background-color: #fff;
+}
+
+header
+{
+    position: relative;
+
+    width: 100%;
+    height: 7em;
+
+    background-color: $main-color;
+    i
+    {
+        left: 2em;
+
+        cursor: pointer;
+
+        @include center;
+        &:nth-of-type(2)
+        {
+            right: 2em;
+            left: auto;
+        }
+        &:active
+        {
+            transform: translate(1px,-48%);
+        }
+    }
+    .menu
+    {
+        @include icons-sprite(menu);
+    }
+    .back
+    {
+        @include icons-sprite(back);
+    }
+    .close
+    {
+        @include icons-sprite(close);
+    }
+    .help
+    {
+        @include icons-sprite(helps);
+    }
+    .menu-log{
+        @include icons-sprite(log);
+    }
+    h1
+    {
+        font-size: 3.5em;
+        line-height: 2em;
+
+        text-align: center;
+
+        color: white;
+    }
+}
+
+section
+{
+    padding-right: 5%;
+    padding-left: 5%;
+
+    text-align: center;
+    overflow: auto;
+
+    background-color: #f0f0f0;
+    height: 113em;
+    h1
+    {
+        font-size: 3.8em;
+        font-weight: 600;
+        line-height: 3em;
+    }
+}
+.lastgame
+{
+    margin: 2.7em 0;
+
+    border: 1px solid #d6d6d6;
+    h1
+    {
+        font-size: 3.8em;
+        line-height: 3em;
+
+        position: relative;
+
+        color: #999;
+        background-color: white;
+        &:after
+        {
+            right: 5%;
+
+            display: block;
+
+            content: '';
+
+            @include center;
+            @include icons-sprite(icon-white);
+        }
+    }
+}
+.version
+{
+    border: 1px solid #d6d6d6;
+    background-color: white;
+    h1
+    {
+        font-size: 3.8em;
+        line-height: 1.75em;
+
+        width: 100%;
+
+        color: #feb135;
+        border-bottom: 1px solid #feb135;
+    }
+    a
+    {
+        font-size: 3.8em;
+        line-height: 4em;
+
+        display: block;
+
+        width: 80%;
+        height: 4em;
+        margin: 3rem auto;
+
+        cursor: pointer;
+
+        color: white;
+        background-color: $main-color;
+        &:hover,
+        &:focus
+        {
+            color: white;
+        }
+    }
+    p
+    {
+        font-size: 2.5em;
+
+        color: #999;
+    }
+    .icon
+    {
+        position: relative;
+        &:after
+        {
+            right: -10%;
+
+            display: block;
+
+            content: '';
+
+            @include center;
+            @include icons-sprite(icon-tri);
+        }
+    }
+}
+.indicators
+{
+    @include indicators;
+}
+table
+{
+    width: 100%;
+    tr
+    {
+        padding: 1em 2em;
+        td
+        {
+            min-width: 6em;
+            padding: .5em;
+
+            text-align: right;
+            &:nth-of-type(2)
+            {
+                padding-right: 5em;
+            }
+        }
+    }
+}
+form
+{
+    font-size: 3em;
+    line-height: 1.75em;
+
+    padding: 1em;
+
+    color: #555;
+    background-color: #fff;
+    box-shadow: 0 0 1px $main-color;
+    input
+    {
+        font-size: 1em;
+
+        width: 100%;
+        padding: .2em 1em;
+    }
+    label
+    {
+        font-size: .5em;
+
+        position: absolute;
+
+        margin-left: 1em;
+
+        color: red;
+    }
+    button
+    {
+        font-size: 1em;
+
+        margin: 1em;
+
+        text-align: center;
+
+        @include button-theme($btn-color: $main-color);
+    }
+}
+#killer_label
+{
+    color: green;
+}
+.setBg
+{
+    border-top: 1px solid lighten($main-color,40%);
+    background-color: $main-color;
+    > div
+    {
+        position: absolute;
+        left: 50%;
+
+        width: 50em;
+        height: 80em;
+        margin: 10em 0 0 -25em;
+
+        border: .5em solid #fff;
+        background-color: #ffedc5;
+
+        @include transition(all 1s ease 0s);
+        @include backface-visibility(hidden);
+        span
+        {
+            font-size: 3em;
+            line-height: 2em;
+
+            position: absolute;
+            left: 50%;
+
+            display: block;
+
+            width: 2em;
+            height: 2em;
+
+            color: orange;
+            border: 2px solid #ffedc5;
+            border-color: #ffedc5;
+            background-color: #fff;
+
+            @include border-radius(50%);
+            @include transform(translate(-50%,-50%));
+        }
+        img
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            display: block;
+
+            width: 20em;
+            height: 20em;
+
+            @include transform(translate(-50%,-50%));
+        }
+        p
+        {
+            font-size: 3em;
+            line-height: 2em;
+
+            position: relative;
+            top: 70%;
+
+            padding: 0 2em;
+
+            text-align: center;
+
+            color: orange;
+        }
+    }
+    button
+    {
+        font-size: 3em;
+
+        position: relative;
+
+        margin-top: 33em;
+
+        text-align: center;
+
+        @include button-theme($btn-color: orange);
+    }
+}
+.front
+{
+    // @include animation(rotateCard 1s);
+    @include transform(rotateY(0deg));
+}
+.cover
+{
+    // @include animation(recoveyc 1s);
+    @include transform(rotateY(180deg));
+}
+.rotate
+{
+    @include transform(rotateY(360deg));
+}
+.closebg{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+.closewin{
+    position: absolute;
+    display: none;
+    width: 47em;
+    height: 30em;
+    top: 50%;
+    left: 50%;
+    margin: -15em 0 0 -25em;
+    background-color: #fff;
+    z-index: 1001;
+    @include border-radius(1em);
+    p{
+        font-size: 3.5em;
+        color: #555;
+        text-align: center;
+        position: relative;
+        top: 30%;
+    }
+    button{
+        width: 6em;
+        height: 3em;
+        position: absolute;
+        display: block;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        border-radius: 1rem;
+        bottom: 1em;
+        border: none;
+        font-size: 3em;
+        color: #fff;
+        &:first-of-type{
+            background-color: #f66f6f;
+            left: 1.5em;
+        }
+        &:last-of-type{
+            background-color: #c6c6c6;
+            right: 1.5em;
+        }
+    }
+}
+.day{
+
+}

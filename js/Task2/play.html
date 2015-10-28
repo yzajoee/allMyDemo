@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>杀人游戏简化版</title>
+	<link rel="stylesheet" href="stylesheets/screen.css" />
+
+	<meta name="viewport" content="width=720" />
+</head>
+<body>
+	<div class="main">
+		<header> <i class="back"></i>
+			<h1>法官本台</h1> <i class="close"></i>
+		</header>
+		<section class="setBg">
+			<div id="card" class="front">
+				<span id="playerNo">1</span>
+				<img src="images/img-1.png" alt="" />
+			</div>
+			<div id="cardBack" class="cover">
+				<span id="playerNoBack">1</span>
+				<img src="images/img-2.png" alt="" />
+				<p id="identify">你的身份是杀手!!</p>
+				<!-- <p>你的身份是水民，你要通过逻辑分析抓出隐藏的杀手</p>
+			-->
+		</div>
+		<button id="btn-1">查看1号身份</button>
+		<!-- <button id="btn-1">隐藏并传递给下一位</button>
+	-->
+</section>
+</div>
+
+<div class="closebg"></div>
+<div class="closewin">
+<p>确定结束这场游戏吗？</p>
+<button class="cancel">取消</button>
+<button class="confirm">确定</button>
+</div>
+<script src="javascripts/jquery.min.js"></script>
+<script src="javascripts/play.js"></script>
+</body>
+</html>

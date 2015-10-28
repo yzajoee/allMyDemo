@@ -1,0 +1,64 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 1, ../sass/style/_reset.scss */
+body {
+  line-height: 1.4;
+  color: #333;
+  font-family: arial;
+  background: white;
+}
+
+/* line 7, ../sass/style/_reset.scss */
+input, textarea, select {
+  font-size: 100%;
+  font-family: inherit;
+}
+
+/* line 11, ../sass/style/_reset.scss */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, form {
+  margin: 0;
+}
+
+/* line 14, ../sass/style/_reset.scss */
+ul, ol {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+/*image with no-border*/
+/* line 19, ../sass/style/_reset.scss */
+img {
+  border: 0;
+}
+
+/* line 1, ../sass/style/_main.scss */
+html {
+  background-image: url(../images/bg.png);
+  height: 100%;
+}
+
+/* line 6, ../sass/style/_main.scss */
+body {
+  height: 100%;
+  background: url(../images/bg-top.png) fixed no-repeat 100% 0, url(../images/bg-bottom.png) fixed no-repeat 0 100%;
+}
+
+/* line 10, ../sass/style/_grid.scss */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 960px;
+}
+/* line 14, ../sass/style/mixins/_clearfix.scss */
+.container:before, .container:after {
+  content: " ";
+  display: table;
+}
+/* line 19, ../sass/style/mixins/_clearfix.scss */
+.container:after {
+  clear: both;
+}

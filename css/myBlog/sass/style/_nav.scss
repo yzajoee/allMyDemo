@@ -1,0 +1,24 @@
+.nav {
+  @include clearfix;
+
+  > li {
+    position: relative;
+    > a {
+      position: relative;
+      display: block;
+      padding: $nav-link-padding;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+    // Active state, and its :hover to override normal :hover
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        
+      }
+    }
+  }
+}

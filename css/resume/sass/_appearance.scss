@@ -1,0 +1,9 @@
+header{
+	// background-color: lighten($grey-base,50%);
+	background-color: $clr-dec;
+	overflow: hidden;
+	*zoom: 1;
+}
+.bg-1{
+    background-color:  lighten($grey-base,80%);
+}

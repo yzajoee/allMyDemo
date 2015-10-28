@@ -1,0 +1,243 @@
+/*reset*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+	margin:0;        
+	padding:0;    	
+}  
+table {
+    border-collapse:collapse;
+    border-spacing:0;    
+}  
+fieldset,img {
+	border:0;    
+}  
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-style:normal;        
+    font-weight:normal;    
+}  
+ol,ul{
+    list-style: none;
+}
+caption,th {       
+	text-align:left;    
+}  
+h1,h2,h3,h4,h5,h6{
+	font-size: 100%;
+	font-weight: normal;
+}
+q:before,q:after {
+    content:'';    
+}  
+abbr,acronym {
+	border:0;    
+}
+
+/*全局*/
+.clearfix:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix:after{
+	*+height: 1%;
+}
+html{
+	font-family:arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+	font-size: 62.5%;
+}
+@media (max-width: 321px) {
+	html{
+        font-size: 30%;
+	}
+}
+@media (min-width: 321px) and (max-width: 481px) {
+	html{
+		font-size: 40%;
+	}
+}
+@media (min-width: 481px) and (max-width: 641px) {
+	html{
+		font-size: 50%;
+	}
+}
+@media (min-width: 768px){
+	body{
+		margin: 0 auto;
+        width: 768px;
+	}
+	footer{
+		width: 768px !important;
+	}
+}
+.wrap{
+	min-width: 250px;
+	width: 100%;
+	padding-top: 3rem;
+	background-color: #29BEDF;
+	color: #fff;
+}
+
+ 
+/*header*/
+header{
+	position: relative;
+	padding: 1.5rem 0 1.5rem 0;
+}
+.menu{
+	top: 50%;
+	left: 2.1rem;
+	margin-top: -2rem;
+	background-repeat: no-repeat;
+	background-size: 5.2rem 43.1rem;
+  background-image: url('../img/sprite-verti.png');
+  background-position: left 0;
+	width: 4rem;
+	height: 4rem;
+	position: absolute;
+}
+header h1{
+	color: #FFF;
+	text-align: center;
+    font-size: 3.4rem;
+    line-height: 100%;
+}
+.close{
+	top: 50%;
+	right: 2.1rem;
+	margin-top: -2rem;
+	background-repeat: no-repeat;
+	background-size: 5.2rem 43.1rem;
+  background-image: url('../img/sprite-verti.png');
+  background-position: left -5rem;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+}
+/*content*/
+.content{
+    width: 100%;
+    position: relative;
+    padding-bottom: 15rem;
+}
+.block2{
+	height: 8rem;
+	background-color: #B9E9F5;
+	color: #505050;
+	position: relative;
+	line-height: 8rem;
+}
+.block2 p{
+	font-size: 2.6rem;
+	padding-left: 6rem;
+}
+#player{
+	cursor: pointer;
+	top: 50%;
+	right: 2.1rem;
+	margin-top: -2.6rem;
+	background-repeat: no-repeat;
+	background-size: 5.2rem 43.1rem;
+  background-image: url('../img/sprite-verti.png');
+  background-position: left -9.6rem;
+    width: 5.2rem;
+    height: 5.2rem;
+    position: absolute;
+}
+.block3{
+	background-repeat: no-repeat;
+	background-size: 5.2rem 43.1rem;
+  background-image: url('../img/sprite-verti.png');
+  background-position: left -15.9rem;
+	margin: 0 0 0 7rem;
+	padding: 3rem 0 2rem 2rem; 
+	font-size: 2.4rem;
+	color: #fff;
+}
+.layout{
+	text-align: center;
+    width: 33.3333%;
+    float: left;
+    position: relative;
+}
+.box{
+	width: 13rem;
+	height: 13rem;
+	margin: 2rem auto 7.5rem auto;
+	border: #fff 5px solid;
+}
+.lay1{
+	line-height: 10rem;
+	font-size: 3rem;
+	height: 10rem;
+	color: #666666;
+	background-color: #F6C87B;
+}
+.lay2{
+    font-size: 2.3rem;
+    height: 3rem;
+    color: #ffffff;
+    background-color: #83B09B;
+}
+.i-menu{
+	left: 50%;
+	margin-left: -7rem;
+	margin-top: -4.5rem;
+	width: 14rem;
+	padding: 0;
+	position: absolute;
+	text-align: justify;
+}
+.i-menu:after{
+	display:inline-block;
+    overflow:hidden;
+    width:100%;
+    height:0;
+    content:'';
+    vertical-align:top;
+}
+     
+
+.i-menu>li{
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+	background-size: 5.2rem 43.1rem;
+}
+.i-menu>li:nth-child(1){
+  background-image: url('../img/sprite-verti.png');
+  background-position: left -27.1rem;
+}
+.i-menu>li:nth-child(2){
+  background-image: url('../img/sprite-verti.png');
+  background-position: left -31.1rem;
+}
+.i-menu>li:nth-child(3){
+  background-image: url('../img/sprite-verti.png');
+  background-position: left -35.1rem;
+}
+.i-menu>li:nth-child(4){
+  background-image: url('../img/sprite-verti.png');
+  background-position: left -39.1rem;
+}
+
+/*footer*/
+footer{
+	width: 100%;
+	height: 17rem;
+	bottom: 0;
+	position: fixed;
+	background-color: #29BEDF;
+}
+footer p{
+	display: block;
+	width: 32rem;
+	height: 9rem;
+	margin: 4.5rem auto;
+	background-color: #FBB436;
+	color: #fff;
+	font-size: 4rem;
+	text-align: center;
+	line-height: 9rem;
+}
